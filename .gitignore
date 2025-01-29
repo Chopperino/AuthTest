@@ -1,0 +1,23 @@
+/**/node_modules
+/**/.idea
+/**/package-lock.json
+/**/.env
+/**/dist
+
+# Project exclude paths
+/src/controllers/auth.controller.js
+/src/controllers/main.controller.js
+/src/dtos/auth.login.dto.js
+/src/dtos/auth.register.dto.js
+/src/middlewares/auth.middleware.js
+/src/middlewares/validatation.middleware.js
+/src/repositories/country.repository.js
+/src/repositories/user.repository.js
+/src/routes/auth.router.js
+/src/routes/main.router.js
+/src/services/auth.service.js
+/src/services/country.service.js
+/src/services/index.js
+/src/types/database/DbCountry.js
+/src/types/database/DbUser.js
+/src/index.js

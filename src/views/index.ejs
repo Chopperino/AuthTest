@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel="stylesheet" type = "text/css" href="../public/style.css">
+</head>
+<body>
+<% if (user) { %>
+    <h1>Greetings, <%= user.real_name %></h1>
+    <p>Email: <%= user.email %></p>
+    <a href="/auth/logout">Logout</a>
+<% } else { %>
+    <h1>Log in or sign up, please</h1>
+    <a href="/auth/login">Log in</a>
+    <br>
+    <a href="/auth/register">Sign up</a>
+<% } %>
+</body>
+</html>
