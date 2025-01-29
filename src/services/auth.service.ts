@@ -24,6 +24,15 @@ export class AuthService {
       );
     }
 
+    const MIN_AGE = 12;
+    const birthDate = userData.birth_date;
+    const minBirthDate = new Date();
+    minBirthDate.setFullYear(minBirthDate.getFullYear() - MIN_AGE);
+
+    if (birthDate > minBirthDate) {
+      throw new Error(`You must be at least ${MIN_AGE} years old to register`);
+    }
+
     userData.password = await bcrypt.hash(userData.password, 10);
     const user = await this.userRepository.create({
       ...userData
